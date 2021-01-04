@@ -7,7 +7,7 @@
     >
 
     <androidx.cardview.widget.CardView
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/card_view_margin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -21,11 +21,11 @@
 
             <ImageView
                 android:id="@+id/imgProfil"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
+                android:layout_width="@dimen/card_view_image_width"
+                android:layout_height="@dimen/card_view_image_height"
+                android:layout_marginStart="@dimen/card_view_image_margin_start"
+                android:layout_marginTop="@dimen/card_view_image_margin_top"
+                android:layout_marginBottom="@dimen/card_view_image_margin_bottom"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -35,10 +35,10 @@
                 android:id="@+id/txtAdSoyad"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="Robert Lewandowski"
+                android:layout_marginStart="@dimen/card_view_txt_ad_margin_start"
+                android:text="@string/card_view_futbolcu_ad"
                 android:textColor="@color/black"
-                android:textSize="24sp"
+                android:textSize="@dimen/card_view_txt_ad_size"
                 app:layout_constraintStart_toEndOf="@+id/imgProfil"
                 app:layout_constraintTop_toTopOf="@+id/imgProfil" />
 
@@ -46,24 +46,24 @@
                 android:id="@+id/txtTakim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="@dimen/card_view_txt_takim_margin_top"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/txtAdSoyad"
                 app:layout_constraintTop_toBottomOf="@+id/txtAdSoyad"
-                tools:text="Bayern Münih" />
+                tools:text="@string/card_view_futbolcu_takim" />
 
             <TextView
                 android:id="@+id/txtDogumTarihi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
-                android:layout_marginEnd="140dp"
-                android:layout_marginBottom="15dp"
-                android:text="21 Ağustos 1988"
+                android:layout_marginEnd="@dimen/card_view_txt_dogum_tarihi_margin_end"
+                android:text="@string/card_view_futbolcu_dogum_tarihi"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/txtTakim"
-                app:layout_constraintTop_toBottomOf="@+id/txtTakim" />
+                app:layout_constraintTop_toBottomOf="@+id/txtTakim"
+                app:layout_constraintVertical_bias="0.466" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

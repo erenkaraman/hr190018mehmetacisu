@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">HR190018_MehmetAcisuFinal</string>
+    <string name="app_name">En İyi Futbolcular</string>
+    <string name="network_alert_title">İnternet Bağlantınız Yok</string>
+    <string name="network_alert_positive_button">İnterneti Aç</string>
+    <string name="network_alert_negative_button">Kapat</string>
+    <string name="network_alert_message">Uygulamayı kullanmak için internete bağlayın.</string>
+    <string name="progress_dialog_message">Lütfen Bekleyiniz</string>
+    <string name="back_pressed_alert_title">Çıkmak istediğinize emin misiniz?</string>
+    <string name="back_pressed_alert_message">Uygulamadan çıkmak istiyor musunuz ?</string>
+    <string name="back_pressed_alert_negative_button">İptal</string>
+    <string name="back_pressed_alert_positive_button">Evet</string>
+    <string name="activity_futbolcu_title">BAŞLIK</string>
+    <string name="activity_futbolcu_detail">DETAY</string>
+    <string name="card_view_futbolcu_ad">Robert Lewandowski</string>
+    <string name="card_view_futbolcu_takim">Bayern Münih</string>
+    <string name="card_view_futbolcu_dogum_tarihi">21 Ağustos 1988</string>
+
 </resources>

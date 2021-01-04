@@ -20,22 +20,23 @@
             <ImageView
                 android:id="@+id/imgDetay"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:scaleType="fitXY" />
+                android:layout_height="@dimen/activity_futbolcu_detay_img_height"
+                android:scaleType="fitXY"
+                tools:srcCompat="@tools:sample/avatars" />
 
             <TextView
                 android:id="@+id/txtBaslik"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text="BAŞLIK" />
+                android:padding="@dimen/activity_futbolcu_detay_title_padding"
+                android:text="@string/activity_futbolcu_title" />
 
             <TextView
                 android:id="@+id/txtDetay"
                 android:layout_width="match_parent"
-                android:layout_height="495dp"
-                android:padding="10dp"
-                android:text="DETAY" />
+                android:layout_height="@dimen/activity_futbolcu_detay_detail_height"
+                android:padding="@dimen/activity_futbolcu_detay_title_padding"
+                android:text="@string/activity_futbolcu_detail" />
         </LinearLayout>
 
 

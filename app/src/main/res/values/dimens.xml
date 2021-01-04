@@ -1,2 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <dimen name="activity_futbolcu_detay_img_height">200dp</dimen>
+    <dimen name="activity_futbolcu_detay_title_padding">10dp</dimen>
+    <dimen name="activity_futbolcu_detay_detail_height">495dp</dimen>
+    <dimen name="activity_list_img_height">200dp</dimen>
+    <dimen name="activity_list_rcv_height">0dp</dimen>
+    <dimen name="card_view_image_width">100dp</dimen>
+    <dimen name="card_view_margin">5dp</dimen>
+    <dimen name="card_view_image_height">100dp</dimen>
+    <dimen name="card_view_image_margin_top">16dp</dimen>
+    <dimen name="card_view_image_margin_start">16dp</dimen>
+    <dimen name="card_view_image_margin_bottom">16dp</dimen>
+    <dimen name="card_view_txt_ad_margin_start">16dp</dimen>
+    <dimen name="card_view_txt_ad_size">24sp</dimen>
+    <dimen name="card_view_txt_takim_margin_top">16dp</dimen>
+    <dimen name="card_view_txt_dogum_tarihi_margin_end">140dp</dimen>
+
+</resources>

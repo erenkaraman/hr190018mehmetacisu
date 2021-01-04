@@ -58,7 +58,7 @@ public class ListActivity extends AppCompatActivity {
 
                     @Override
                     public void onSubscribe(Disposable d) {
-                        Log.e("RETROFIT","onSubscribe : ");
+
                     }
 
                     @Override
@@ -69,7 +69,7 @@ public class ListActivity extends AppCompatActivity {
                     @Override
                     public void onError(Throwable e) {
 
-                        Log.e("RETROFIT","onError : " + e.getLocalizedMessage());
+
                     }
 
                     @Override
@@ -108,21 +108,22 @@ public class ListActivity extends AppCompatActivity {
 
     private void dialogGetir(){
         ProgressDialog progressDialog = new ProgressDialog(ListActivity.this);
-        progressDialog.setMessage("Lütfen Bekleyiniz");
+        progressDialog.setMessage(getResources().getString(R.string.progress_dialog_message));
         progressDialog.show();
     }
 
     public void onBackPressed(){
         final AlertDialog.Builder builder = new AlertDialog.Builder(ListActivity.this);
-        builder.setMessage("Çıkmak istediğinize emin misiniz?");
+        builder.setTitle(getResources().getString(R.string.back_pressed_alert_title));
+        builder.setMessage(getResources().getString(R.string.back_pressed_alert_message));
         builder.setCancelable(true);
-        builder.setNegativeButton("İptal", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton((getResources().getString(R.string.back_pressed_alert_negative_button)), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 dialogInterface.cancel();
             }
         });
-        builder.setPositiveButton("Evet", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton((getResources().getString(R.string.back_pressed_alert_positive_button)), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 finish();

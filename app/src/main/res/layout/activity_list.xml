@@ -10,7 +10,7 @@
     <ImageView
         android:id="@+id/imgDetay"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="@dimen/activity_list_img_height"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,7 +20,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcvFutbolcular"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/activity_list_rcv_height"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
