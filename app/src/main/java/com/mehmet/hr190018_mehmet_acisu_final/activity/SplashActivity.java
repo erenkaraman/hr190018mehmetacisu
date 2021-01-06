@@ -34,7 +34,7 @@ public class SplashActivity extends AppCompatActivity {
     public void connection(){
         NetworkControl networkControl = new NetworkControl();
         if(networkControl.isConnected(getApplicationContext())){
-            init();
+            timeriBaslat();
         }
         else{
             showAlertDialog();
@@ -61,7 +61,7 @@ public class SplashActivity extends AppCompatActivity {
         alertDialog.show();
     }
 
-    private void init(){
+    private void timeriBaslat(){
         CountDownTimer countDownTimer =new CountDownTimer(3000,1000) {
             @Override
             public void onTick(long l) {
