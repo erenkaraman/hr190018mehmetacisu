@@ -1,4 +1,4 @@
-package com.mehmet.hr190018_mehmet_acisu_final.network;
+package com.mehmet.hr190018_mehmet_acisu_final.util;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
@@ -6,7 +6,7 @@ import android.net.NetworkInfo;
 
 import com.mehmet.hr190018_mehmet_acisu_final.activity.SplashActivity;
 
-public class NetworkControl {
+public class NetworkUtils {
 
     public boolean isConnected(Context context) {
         ConnectivityManager connectivityManager = (ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);

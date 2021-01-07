@@ -4,7 +4,6 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -35,16 +34,12 @@ public class ListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
-
-        init();
-
+        FutbolculariGetir();
     }
-
     private  void  init()
     {
         FutbolculariGetir();
     }
-
 
     void  FutbolculariGetir()
     {
@@ -104,14 +99,14 @@ public class ListActivity extends AppCompatActivity {
         String tiklananFutbolcuString = ObjectUtil.futbolcuToJsonString(tiklananFutbolcu);
         secondActivityIntent.putExtra(Constants.TIKLANAN_FUTBOLCU_BASLIK,tiklananFutbolcuString);
         startActivity(secondActivityIntent);
-    }
 
+    }
     private void dialogGetir(){
         ProgressDialog progressDialog = new ProgressDialog(ListActivity.this);
         progressDialog.setMessage(getResources().getString(R.string.progress_dialog_message));
         progressDialog.show();
-
     }
+
     public void onBackPressed(){
         final AlertDialog.Builder builder = new AlertDialog.Builder(ListActivity.this);
         builder.setTitle(getResources().getString(R.string.back_pressed_alert_title));
