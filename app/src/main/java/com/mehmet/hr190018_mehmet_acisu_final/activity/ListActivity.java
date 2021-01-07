@@ -110,6 +110,7 @@ public class ListActivity extends AppCompatActivity {
         ProgressDialog progressDialog = new ProgressDialog(ListActivity.this);
         progressDialog.setMessage(getResources().getString(R.string.progress_dialog_message));
         progressDialog.show();
+
     }
     public void onBackPressed(){
         final AlertDialog.Builder builder = new AlertDialog.Builder(ListActivity.this);
