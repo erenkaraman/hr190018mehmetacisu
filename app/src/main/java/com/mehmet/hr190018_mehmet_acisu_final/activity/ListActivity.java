@@ -92,6 +92,7 @@ public class ListActivity extends AppCompatActivity {
             public void onClick(int position) {
                 FutbolcuModel tiklananFutbolcu = futbolcuList.get(position);
                 openNextActivity(tiklananFutbolcu);
+                dialogGetir();
             }
         });
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
@@ -103,7 +104,6 @@ public class ListActivity extends AppCompatActivity {
         String tiklananFutbolcuString = ObjectUtil.futbolcuToJsonString(tiklananFutbolcu);
         secondActivityIntent.putExtra(Constants.TIKLANAN_FUTBOLCU_BASLIK,tiklananFutbolcuString);
         startActivity(secondActivityIntent);
-        dialogGetir();
     }
 
     private void dialogGetir(){
@@ -111,7 +111,6 @@ public class ListActivity extends AppCompatActivity {
         progressDialog.setMessage(getResources().getString(R.string.progress_dialog_message));
         progressDialog.show();
     }
-
     public void onBackPressed(){
         final AlertDialog.Builder builder = new AlertDialog.Builder(ListActivity.this);
         builder.setTitle(getResources().getString(R.string.back_pressed_alert_title));
