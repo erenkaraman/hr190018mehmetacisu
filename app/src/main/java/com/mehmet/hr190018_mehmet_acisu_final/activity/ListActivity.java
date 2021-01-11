@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +15,7 @@ import com.mehmet.hr190018_mehmet_acisu_final.model.FutbolcuModel;
 import com.mehmet.hr190018_mehmet_acisu_final.R;
 import com.mehmet.hr190018_mehmet_acisu_final.network.Service;
 import com.mehmet.hr190018_mehmet_acisu_final.adaptor.FutbolcuAdaptor;
+import com.mehmet.hr190018_mehmet_acisu_final.util.DialogUtil;
 import com.mehmet.hr190018_mehmet_acisu_final.util.Constants;
 import com.mehmet.hr190018_mehmet_acisu_final.util.ObjectUtil;
 
@@ -29,21 +31,19 @@ import io.reactivex.schedulers.Schedulers;
 public class ListActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
         FutbolculariGetir();
+        dialogGoster();
     }
     private  void  init()
     {
         FutbolculariGetir();
     }
-
     void  FutbolculariGetir()
     {
-
         new Service().getServiceApi().futbolculariGetir().
                 subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -53,32 +53,29 @@ public class ListActivity extends AppCompatActivity {
 
                     @Override
                     public void onSubscribe(Disposable d) {
-
+                        Log.e("RETROFIT","onSubscribe : ");
                     }
 
                     @Override
                     public void onNext(List<FutbolcuModel> futbolcuList) {
                         futbolcular=futbolcuList;
+
                     }
 
                     @Override
                     public void onError(Throwable e) {
-
-
+                        e.printStackTrace();
                     }
 
                     @Override
                     public void onComplete()
                     {
                         if(futbolcular.size()>0) {
-
                             initRecycleView(futbolcular);
                         }
                     }
                 });
     }
-
-
     private  void  initRecycleView(List<FutbolcuModel> futbolcuList)
     {
         recyclerView =findViewById(R.id.rcvFutbolcular);
@@ -87,26 +84,26 @@ public class ListActivity extends AppCompatActivity {
             public void onClick(int position) {
                 FutbolcuModel tiklananFutbolcu = futbolcuList.get(position);
                 openNextActivity(tiklananFutbolcu);
-                dialogGetir();
             }
         });
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         recyclerView.setAdapter(futbolcuAdaptor);
     }
-
     private void openNextActivity(FutbolcuModel tiklananFutbolcu){
         Intent secondActivityIntent=new Intent(getApplicationContext(), FutbolcuDetayActivity.class);
         String tiklananFutbolcuString = ObjectUtil.futbolcuToJsonString(tiklananFutbolcu);
         secondActivityIntent.putExtra(Constants.TIKLANAN_FUTBOLCU_BASLIK,tiklananFutbolcuString);
         startActivity(secondActivityIntent);
-
     }
-    private void dialogGetir(){
+    private void dialogGoster(){
         ProgressDialog progressDialog = new ProgressDialog(ListActivity.this);
         progressDialog.setMessage(getResources().getString(R.string.progress_dialog_message));
+        if (progressDialog != null) {
+            if ( progressDialog.isShowing())
+                progressDialog.dismiss();
+        }
         progressDialog.show();
     }
-
     public void onBackPressed(){
         final AlertDialog.Builder builder = new AlertDialog.Builder(ListActivity.this);
         builder.setTitle(getResources().getString(R.string.back_pressed_alert_title));
@@ -127,4 +124,15 @@ public class ListActivity extends AppCompatActivity {
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
     }
+    /*
+    private void dialogGetir(){
+       DialogUtil dialogUtil = new DialogUtil();
+       dialogUtil.ProgressDialogGetir(ListActivity.this,getResources().getString(R.string.progress_dialog_message));
+    }
+
+    public void onBackPressed() {
+        DialogUtil dialogUtil = new DialogUtil();
+        dialogUtil.AlertDialogGetir(ListActivity.this,getResources().getString(R.string.back_pressed_alert_title),getResources().getString(R.string.back_pressed_alert_message),false,getResources().getString(R.string.back_pressed_alert_positive_button),getResources().getString(R.string.back_pressed_alert_negative_button),ListActivity.this);
+    }
+*/
 }

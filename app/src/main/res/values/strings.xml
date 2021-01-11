@@ -8,7 +8,7 @@
     <string name="back_pressed_alert_title">Çıkmak istediğinize emin misiniz?</string>
     <string name="back_pressed_alert_message">Uygulamadan çıkmak istiyor musunuz ?</string>
     <string name="back_pressed_alert_negative_button">İptal</string>
-    <string name="back_pressed_alert_positive_button">Evet</string>
+    <string name="back_pressed_alert_positive_button">Çıkış</string>
     <string name="activity_futbolcu_title">BAŞLIK</string>
     <string name="activity_futbolcu_detail">DETAY</string>
     <string name="card_view_futbolcu_ad">Robert Lewandowski</string>

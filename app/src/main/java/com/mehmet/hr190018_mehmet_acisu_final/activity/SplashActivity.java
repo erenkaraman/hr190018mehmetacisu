@@ -11,7 +11,8 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.mehmet.hr190018_mehmet_acisu_final.R;
-import com.mehmet.hr190018_mehmet_acisu_final.util.NetworkUtils;
+import com.mehmet.hr190018_mehmet_acisu_final.util.DialogUtil;
+import com.mehmet.hr190018_mehmet_acisu_final.util.NetworkUtil;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -28,8 +29,8 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     public void connection(){
-        NetworkUtils networkUtils = new NetworkUtils();
-        if(networkUtils.isConnected(getApplicationContext())){
+        NetworkUtil networkUtil = new NetworkUtil();
+        if(networkUtil.isConnected(getApplicationContext())){
             timeriBaslat();
         }
         else{
@@ -41,22 +42,21 @@ public class SplashActivity extends AppCompatActivity {
         builder.setTitle(getResources().getString(R.string.network_alert_title));
         builder.setMessage(getResources().getString(R.string.network_alert_message))
                 .setCancelable(false);
-                builder.setPositiveButton(getResources().getString(R.string.network_alert_positive_button), new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
-                    }
-                });
-                builder.setNegativeButton(getResources().getString(R.string.network_alert_negative_button), new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        finish();
-                    }
-                });
+        builder.setPositiveButton(getResources().getString(R.string.network_alert_positive_button), new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
+            }
+        });
+        builder.setNegativeButton(getResources().getString(R.string.network_alert_negative_button), new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        });
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
     }
-
     private void timeriBaslat(){
         CountDownTimer countDownTimer =new CountDownTimer(3000,1000) {
             @Override
@@ -77,5 +77,10 @@ public class SplashActivity extends AppCompatActivity {
             startActivity(secondActivityIntent);
             finish();
         }
+        /*
+   private void showAlertDialog() {
+        DialogUtil dialogUtil = new DialogUtil();
+        dialogUtil.AlertDialogGetir(SplashActivity.this,getResources().getString(R.string.network_alert_title),getResources().getString(R.string.network_alert_message),false,getResources().getString(R.string.network_alert_positive_button),getResources().getString(R.string.network_alert_negative_button),SplashActivity.this);
+    */
     }
 
