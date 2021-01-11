@@ -15,7 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/imgDetay" />
+        app:srcCompat="@drawable/detay" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcvFutbolcular"
