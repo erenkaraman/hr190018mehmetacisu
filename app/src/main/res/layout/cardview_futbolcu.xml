@@ -33,29 +33,30 @@
 
             <TextView
                 android:id="@+id/txtAdSoyad"
+                style="@style/cardview_futbolcu_ad_soyad"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/card_view_txt_ad_margin_start"
                 android:text="@string/card_view_futbolcu_ad"
-                android:textColor="@color/black"
-                android:textSize="@dimen/card_view_txt_ad_size"
                 app:layout_constraintStart_toEndOf="@+id/imgProfil"
                 app:layout_constraintTop_toTopOf="@+id/imgProfil" />
 
             <TextView
                 android:id="@+id/txtTakim"
+                style="@style/cardview_futbolcu_takim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/card_view_txt_takim_margin_top"
-                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/txtAdSoyad"
                 app:layout_constraintTop_toBottomOf="@+id/txtAdSoyad"
                 tools:text="@string/card_view_futbolcu_takim" />
 
             <TextView
                 android:id="@+id/txtDogumTarihi"
+                style="@style/cardview_futbolcu_dogum_tarihi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/card_view_txt_dogum_tarihi_margin_top"
                 android:layout_marginEnd="@dimen/card_view_txt_dogum_tarihi_margin_end"
                 android:text="@string/card_view_futbolcu_dogum_tarihi"
                 app:layout_constraintBottom_toBottomOf="parent"

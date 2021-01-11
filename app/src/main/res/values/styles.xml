@@ -1,4 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <style name="activity_futbolcu_detay_title">
+        <item name="android:textSize">@dimen/activity_futbolcu_detay_title_text_size</item>
+        <item name="android:textColor">@color/activity_futbolcu_detay_title</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:typeface">serif</item>
+    </style>
 
+    <style name="activity_futbolcu_detay_detail">
+        <item name="android:textColor">@color/activity_futbolcu_detay_detail</item>
+        <item name="android:background">@color/activity_futbolcu_detay_detail_bg</item>
+        <item name="android:textSize">@dimen/activity_futbolcu_detay_detail_text_size</item>
+    </style>
+
+    <style name="cardview_futbolcu_ad_soyad">
+        <item name="android:textSize">@dimen/card_view_txt_ad_soyad_size</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/cardview_futbolcu_ad_soyad</item>
+    </style>
+
+    <style name="cardview_futbolcu_takim">
+        <item name="android:textSize">@dimen/card_view_txt_takim_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/cardview_futbolcu_takim</item>
+    </style>
+
+    <style name="cardview_futbolcu_dogum_tarihi">
+        <item name="android:textSize">@dimen/card_view_txt_dogum_tarihi_size</item>
+        <item name="android:textColor">@color/cardview_futbolcu_dogum_tarih</item>
+    </style>
 </resources>

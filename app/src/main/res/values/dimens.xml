@@ -12,9 +12,16 @@
     <dimen name="card_view_image_margin_start">16dp</dimen>
     <dimen name="card_view_image_margin_bottom">16dp</dimen>
     <dimen name="card_view_txt_ad_margin_start">16dp</dimen>
-    <dimen name="card_view_txt_ad_size">24sp</dimen>
     <dimen name="card_view_txt_takim_margin_top">16dp</dimen>
     <dimen name="card_view_txt_dogum_tarihi_margin_end">140dp</dimen>
+    <dimen name="card_view_txt_dogum_tarihi_margin_top">16dp</dimen>
     <dimen name="logo_height">200dp</dimen>
+
+
+    <dimen name="activity_futbolcu_detay_title_text_size">22sp</dimen>
+    <dimen name="activity_futbolcu_detay_detail_text_size">18sp</dimen>
+    <dimen name="card_view_txt_ad_soyad_size">24sp</dimen>
+    <dimen name="card_view_txt_takim_size">18sp</dimen>
+    <dimen name="card_view_txt_dogum_tarihi_size">15sp</dimen>
 
 </resources>

@@ -7,4 +7,15 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+
+
+    <color name="activity_futbolcu_detay_title">#DD0023</color>
+    <color name="activity_futbolcu_detay_detail">#555555</color>
+    <color name="activity_futbolcu_detay_detail_bg">#FFFFFFFF</color>
+
+    <color name="cardview_futbolcu_ad_soyad">#555555</color>
+    <color name="cardview_futbolcu_takim">#DD0023</color>
+    <color name="cardview_futbolcu_dogum_tarih">#555555</color>
+
 </resources>

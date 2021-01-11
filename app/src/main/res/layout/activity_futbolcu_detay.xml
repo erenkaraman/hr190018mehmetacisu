@@ -26,6 +26,7 @@
 
             <TextView
                 android:id="@+id/txtBaslik"
+                style="@style/activity_futbolcu_detay_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/activity_futbolcu_detay_title_padding"
@@ -33,6 +34,7 @@
 
             <TextView
                 android:id="@+id/txtDetay"
+                style="@style/activity_futbolcu_detay_detail"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/activity_futbolcu_detay_detail_height"
                 android:padding="@dimen/activity_futbolcu_detay_title_padding"
