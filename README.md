@@ -2,7 +2,7 @@
 
 ![Project Logo](https://github.com/mehmetacisuu/hr190018mehmetacisu/blob/master/images/logo.png)
 
-A simple app that gives brief information about my favorite football players that I made in rxJava using retrofit observer.
+A simple application that I made using the best football players.
 
 <h2 id="ScreenShots">ScreenShots</h2> 
   <p>
