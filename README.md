@@ -22,6 +22,8 @@ A simple application that I made using the best football players.
   <li><a href="https://github.com/ReactiveX/RxAndroid">RxAndroid</a></li>
   <li><a href="https://square.github.io/retrofit/">Retrofit2</a></li>
   <li><a href="https://github.com/square/okhttp">OkHttp</a></li>
+  <li><a href="https://developer.android.com/guide/topics/ui/layout/recyclerview">RecyclerView</a></li>
+  
 
 License
 --------
