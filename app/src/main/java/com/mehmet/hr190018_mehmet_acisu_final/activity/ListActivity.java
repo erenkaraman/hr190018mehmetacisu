@@ -70,6 +70,7 @@ public class ListActivity extends AppCompatActivity {
                     @Override
                     public void onComplete()
                     {
+                        dialogGizle();
                         if(futbolcular.size()>0) {
                             initRecycleView(futbolcular);
                         }
@@ -104,7 +105,19 @@ public class ListActivity extends AppCompatActivity {
         }
         progressDialog.show();
     }
+    private void dialogGizle(){
+        ProgressDialog progressDialog = new ProgressDialog(ListActivity.this);
+        if (progressDialog != null) {
+            if ( progressDialog.isShowing())
+                progressDialog.dismiss();
+        }
+    }
+
     public void onBackPressed(){
+       AlertDialogBack();
+    }
+
+    private void AlertDialogBack(){
         final AlertDialog.Builder builder = new AlertDialog.Builder(ListActivity.this);
         builder.setTitle(getResources().getString(R.string.back_pressed_alert_title));
         builder.setMessage(getResources().getString(R.string.back_pressed_alert_message));
