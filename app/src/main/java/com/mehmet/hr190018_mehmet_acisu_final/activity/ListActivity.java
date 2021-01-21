@@ -114,10 +114,10 @@ public class ListActivity extends AppCompatActivity {
     }
 
     public void onBackPressed(){
-       AlertDialogBack();
+       AlertDialogBackPressed();
     }
 
-    private void AlertDialogBack(){
+    private void AlertDialogBackPressed(){
         final AlertDialog.Builder builder = new AlertDialog.Builder(ListActivity.this);
         builder.setTitle(getResources().getString(R.string.back_pressed_alert_title));
         builder.setMessage(getResources().getString(R.string.back_pressed_alert_message));
