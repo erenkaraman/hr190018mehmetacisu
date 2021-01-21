@@ -1,9 +1,11 @@
 package com.mehmet.hr190018_mehmet_acisu_final.activity;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Build;
 import android.os.Bundle;
+import android.text.Html;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.mehmet.hr190018_mehmet_acisu_final.R;
@@ -18,6 +20,7 @@ public class FutbolcuDetayActivity extends AppCompatActivity {
     TextView txtBaslik;
     TextView txtDetay;
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +28,7 @@ public class FutbolcuDetayActivity extends AppCompatActivity {
         init();
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     private void init(){
         String tasinanFutbolcuString = getIntent().getStringExtra(Constants.TIKLANAN_FUTBOLCU_BASLIK);
         FutbolcuModel futbolcuModel = ObjectUtil.jsonStringToFutbolcu(tasinanFutbolcuString);
@@ -35,7 +39,7 @@ public class FutbolcuDetayActivity extends AppCompatActivity {
 
 
         txtBaslik.setText(futbolcuModel.getFutbolcuAdSoyad());
-        txtDetay.setText(futbolcuModel.getBilgi());
+        txtDetay.setText(Html.fromHtml(futbolcuModel.getBilgi(),Html.FROM_HTML_MODE_COMPACT));
         GlideUtil.resmiIndiripGoster(getApplicationContext(),futbolcuModel.getBuyukResimUrl(),imgDetay);
     }
 }
